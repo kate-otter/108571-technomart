@@ -7,10 +7,14 @@
   <body>
     <header class="main-header">
       <a class="main-header-logo">
-        <img src="" width="" height="" alt="Техномарт">
-        <!-- Куда ведет заглушка и как узнать размеры?-->
+        <img src="http://placehold.it/150x100" width="150" height="100" alt="Техномарт">
       </a>
       <p class="subtitle">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+      <section class="header-contacts">
+        <div class="tel">+7 (812) 555-05-55</div>
+        <!-- div потому что к p не получится задать рамку, расположение по центру и изображение.  Или для телефонов есть специальная форма? Или тоже можно обойтись строчным элементом? -->
+        <p>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+      </section>
       <form action="" method="get">
         <input type="search" placeholder="Поиск:">
         <button type="submit"></button>
@@ -18,16 +22,11 @@
       </form>
       <section class="users-menu">
         <ul>
-          <li class="users-menu-item">Закладки: 0</li>
-          <li class="users-menu-item">Корзина: 0</li>
+          <li class="users-menu-item"><a href="#">Закладки: 0</a></li>
+          <li class="users-menu-item"><a href="#">Корзина: 10</a></li>
         </ul>
-        <a href="">Оформить заказ</a>
-        <!-- Изменения цифер в разделах Закладки и Корзина делаются средствами html и css, или это не моя забота? -->
-      </section>
-      <section class="header-contacts">
-        <div class="tel">+7 (812) 555-05-55</div>
-        <!-- div потому что к p не получится задать рамку, расположение по центру и изображение.  Или для телефонов есть специальная форма? Или тоже можно обойтись строчным элементом? -->
-        <p>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        <a href="#" class="users-menu-item submit-order">Оформить заказ</a>
+        <!-- Изменения цифер в разделах Закладки и Корзина делаются средствами html и css, или это не моя забота? Класс лучше задавать пунктам списка или ссылкам? -->
       </section>
       <ul class="login">
         <li><a href="login.html" class="button button-login">Войти</a></li>
@@ -35,25 +34,25 @@
       </ul>
       <nav class="main-navigation">
         <ul>
-          <li class="main-navigation-item">
+          <li>
             <a href="index.html">Главная</a>
           </li>
-          <li class="main-navigation-item">
+          <li>
             <a href="company.html">Компания</a>
           </li>
-          <li class="main-navigation-item">
+          <li>
             <a href="catalog.html">Каталог</a>
           </li>
-          <li class="main-navigation-item">
+          <li>
             <a href="news.html">Новости</a>
           </li>
-          <li class="main-navigation-item">
+          <li>
             <a href="sale.html">Спецпредложения</a>
           </li>
-          <li class="main-navigation-item">
+          <li>
             <a href="delivery.html">Доставка</a>
           </li>
-          <li class="main-navigation-item">
+          <li>
             <a href="contacts.html">Контакты</a>
           </li>
         </ul>
@@ -66,16 +65,16 @@
         <ul class="promo-list">
           <li class="promo-item">
             <h3>Материалы</h3>
-            <a href="#" class="button button-promo">На любой вкус</a>
+            <a href="catalog.html/materials" class="button button-promo">На любой вкус</a>
             <span class="sticker-new">new</span>
           </li>
           <li class="promo-item">
             <h3>Инструмент</h3>
-            <a href="#" class="button button-promo">На все случаи</a>
+            <a href="catalog.html/tools" class="button button-promo">На все случаи</a>
           </li>
           <li class="promo-item">
             <h3>Техника</h3>
-            <a href="#" class="button button-promo">Для стройки</a>
+            <a href="catalog.html/technic" class="button button-promo">Для стройки</a>
           </li>
           <li class="promo-item">
             <h3>Скидки 50%</h3>
@@ -91,89 +90,97 @@
           <section class="promo-slider-item">
             <h3>Перфораторы</h3>
             <p>Настоящие мужские игрушки</p>
-            <a href="" class="button button-promo-slider">Открыть каталог</a>
+            <a href="catalog.html/tools/perforators" class="button button-promo-slider">Открыть каталог</a>
             <span class="slide slide-left"><</span>
             <span class="slide slide-right">></span>
           </section>
           <section class="promo-slider-item">
             <h3>Дрели</h3>
             <p>Соседям на радость!</p>
-            <a href="" class="button button-promo-slider">Открыть каталог</a>
+            <a href="catalog.html/tools/drills" class="button button-promo-slider">Открыть каталог</a>
             <span class="slide slide-left"><</span>
             <span class="slide slide-right">></span>
-            <!-- Валидатор говорит, что нужно делать это какой-то специальной кодировкой; возможно, здесь стоит вообще не текстовые стрелки, а какие-либо иконки? -->
+            <!-- Валидатор говорит, что нужно делать слайдеры какой-то специальной кодировкой; возможно, здесь стоит вообще не текстовые стрелки, а какие-либо иконки? -->
           </section>
         </article>
         <!-- Не знаю, как делать анимацию на слайдере и вообще то ли я сделала. -->                
       </section>
-      <section class="products">
+      <section class="products products-index">
         <h2>Популярные товары:</h2>
-        <a href="" class="button button-products">Все популярные товары</a>
+        <a href="#" class="button button-products">Все популярные товары</a>
         <ul class="products-list">
           <li>
             <article class="products-item">
-              <img src="" width="" height="">
+              <img src="http://placehold.it/150x100" width="150" height="100">
               <h3>Перфоратор BOSCH BFG 9000</h3>
               <p class="products-old-price"><s>32500 Р.</s></p>
-              <a href="" class="products-price">25500 Р.</a>
+              <a href="#" class="products-price">25500 Р.</a>
+              <a href="#" class="button button-products button-buy">Купить</a>
+              <a href="#" class="button button-products button-bookmark">В закладки</a>
             </article>
           </li>
           <li>
             <article class="products-item">
-              <img src="" width="" height="">
+              <img src="http://placehold.it/150x100" width="150" height="100">
               <h3>Перфоратор BOSCH BFG 3000</h3>
               <p class="products-old-price"><s>22500 Р.</s></p>
-              <a href="" class="products-price">15500 Р.</a>
+              <a href="#" class="products-price">15500 Р.</a>
+              <a href="#" class="button button-products button-buy">Купить</a>
+              <a href="#" class="button button-products button-bookmark">В закладки</a>
             </article>
           </li>
           <li>
             <article class="products-item">
-              <img src="" width="" height="">
+              <img src="http://placehold.it/150x100" width="150" height="100">
               <h3>Перфоратор BOSCH BFG 6000</h3>
               <p class="products-old-price"><s>30500 Р.</s></p>
-              <a href="" class="products-price">25500 Р.</a>
+              <a href="#" class="products-price">25500 Р.</a>
+              <a href="#" class="button button-products button-buy">Купить</a>
+              <a href="#" class="button button-products button-bookmark">В закладки</a>
             </article>
           </li>
           <li>
             <article class="products-item">
-              <img src="" width="" height="">
+              <img src="http://placehold.it/150x100" width="150" height="100">
               <h3>Перфоратор BOSCH BFG 2000</h3>
               <p class="products-old-price no-price"></p>
-              <a href="" class="products-price">25500 Р.</a>
+              <a href="#" class="products-price">25500 Р.</a>
+              <a href="#" class="button button-products button-buy">Купить</a>
+              <a href="#" class="button button-products button-bookmark">В закладки</a>
               <span class="sticker-new">new</span>
             </article>
           <!-- Не знаю, как адекватно скрыть отсутствующий блок со старой ценой, чтобы не поехал вверх нижний блок с актуальной ценой. Надо ли карточки товаров выделять в артиклы, или можно убрать артиклы и оставить только li? -->
           </li>
-        <!-- Не знаю, как реализовать то, что нарисовано на макете - изменение содержания артиклов по наведению мыши. Надо ли отдельно размечать кнопки "Купить" и "В закладки"? Или они как-то реализуются через css? --> 
+        <!-- Не знаю, как реализовать то, что нарисовано на макете - изменение содержания артиклов по наведению мыши, но пришла к выводу, что функциональные кнопки "Купить" и "В закладки" в логической разметке все равно нужны. Вероятно, указание цены, кстати, не является ссылкой. -->  
         </ul>
       </section>
       <section class="brands">
         <h2>Популярные производители:</h2>
-        <a href="" class="button button-products">Все популярные производители</a>
+        <a href="catalog.html/brands" class="button button-products">Все популярные производители</a>
         <ul class="brands-list">
           <li>
-            <a href="" class="brans-item"><img src="" width="" height="" alt="BOSCH"></a>
+            <a href="#" class="brans-item"><img src="http://placehold.it/150x100" width="150" height="100" alt="BOSCH"></a>
           </li>
           <li>
-            <a href="" class="brans-item"><img src="" width="" height="" alt="Makita"></a>
+            <a href="#" class="brans-item"><img src="http://placehold.it/150x100" width="150" height="100" alt="Makita"></a>
           </li>
           <li>
-            <a href="" class="brans-item"><img src="" width="" height="" alt="DeWALT"></a>
+            <a href="#" class="brans-item"><img src="http://placehold.it/150x100" width="150" height="100" alt="DeWALT"></a>
           </li>
           <li>
-            <a href="" class="brans-item"><img src="" width="" height="" alt="Интерскол"></a>
+            <a href="#" class="brans-item"><img src="http://placehold.it/150x100" width="150" height="100" alt="Интерскол"></a>
           </li>
           <li>
-            <a href="" class="brans-item"><img src="" width="" height="" alt="HITACHI"></a>
+            <a href="#" class="brans-item"><img src="http://placehold.it/150x100" width="150" height="100" alt="HITACHI"></a>
           </li>
           <li>
-            <a href="" class="brans-item"><img src="" width="" height="" alt="LG"></a>
+            <a href="#" class="brans-item"><img src="http://placehold.it/150x100" width="150" height="100" alt="LG"></a>
           </li>
           <li>
-            <a href="" class="brans-item"><img src="" width="" height="" alt="AEG"></a>
+            <a href="#" class="brans-item"><img src="http://placehold.it/150x100" width="150" height="100" alt="AEG"></a>
           </li>
           <li>
-            <a href="" class="brans-item"><img src="" width="" height="" alt="Metabo"></a>
+            <a href="#" class="brans-item"><img src="http://placehold.it/150x100" width="150" height="100" alt="Metabo"></a>
           </li>
         <!-- Или класс нужно прописывать не ссылкам, а li? Почему? -->
         </ul>
@@ -216,7 +223,7 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами,<br>
         заехав в наш офис:</p>
-        <a href="#" class="map"><img src="#" width="" height="" alt="Карта"></a>
+        <a href="#" class="map"><img src="http://placehold.it/150x100" width="150" height="100" alt="Карта"></a>
         <a href="#" class="button button-write-us">Заблудились? Напишите нам!</a>
       <!-- Не знаю, как реализовать поп-апы с картой и "Напишите нам". Не уверена, что эти элементы нужно было делать через ссылки, но на минимальные требования достаточно просто ссылки на интерактивную карту. -->
       </section>
@@ -224,7 +231,7 @@
 
     <footer>
       <a class="footer-logo">
-        <img src="" width="" height="" alt="Техномарт">
+        <img src="http://placehold.it/150x100" width="150" height="100" alt="Техномарт">
       </a>
       <section class="footer-contacts">
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
@@ -232,35 +239,35 @@
       </section>
       <nav class="footer-navigation">
         <ul>
-          <li class="footer-navigation-item">
+          <li>
             <a href="company.html">Компания</a>
           </li>
-          <li class="footer-navigation-item">
+          <li>
             <a href="news.html">Новости</a>
           </li>
-          <li class="footer-navigation-item">
+          <li>
             <a href="catalog.html">Каталог</a>
           </li>
-          <li class="footer-navigation-item">
+          <li>
             <a href="delivery.html">Доставка</a>
           </li>
-          <li class="footer-navigation-item">
+          <li>
             <a href="contacts.html">Контакты</a>
           </li>
         </ul>
       </nav>
       <nav class="catalog-navigation">
         <ul>
-          <li class="catalog-navigation-item">
+          <li>
             <a href="catalog.html/materials">Материалы</a>
           </li>
-          <li class="catalog-navigation-item">
+          <li>
             <a href="catalog.html/technic">Техника</a>
           </li>
-          <li class="catalog-navigation-item">
+          <li>
             <a href="catalog.html/tools">Инструмент</a>
           </li>
-          <li class="catalog-navigation-item">
+          <li>
             <a href="catalog.html/sale">Спецпредложения</a>
           </li>
         </ul>
@@ -275,6 +282,7 @@
       <section class="developer">
         <p>Обратная связь:<br>
         mail@htmlacademy.ru</p>
+        <!-- Я видела, где-то е-мейлы тоже делаются ссылками. Так же в <a> со стандартными параметрами? -->
         <p>Разработано —<br>
         <a href="htmlacademy.ru">htmlacademy.ru</a></p>
       </section>
