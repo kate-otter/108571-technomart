@@ -6,31 +6,33 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="main-header-logo">
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="Техномарт">
-      </a>
-      <p class="subtitle">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-      <section class="header-contacts">
-        <div class="tel">+7 (812) 555-05-55</div>
-        <!-- div потому что к p не получится задать рамку, расположение по центру и изображение.  Или для телефонов есть специальная форма? Или тоже можно обойтись строчным элементом? -->
-        <p>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-      </section>
-      <form action="" method="get">
-        <input type="search" placeholder="Поиск:">
-        <button type="submit"></button>
-        <!-- больше ничего не надо? Визуальное оформление только через CSS? action="" - куда? -->
-      </form>
-      <section class="users-menu">
-        <ul>
-          <li class="users-menu-item"><a href="#">Закладки: 0</a></li>
-          <li class="users-menu-item"><a href="#">Корзина: 10</a></li>
-        </ul>
-        <a href="#" class="users-menu-item submit-order">Оформить заказ</a>
-      </section>
+      <div class="main-header-top">  
+        <a class="main-header-logo">
+          <img src="http://placehold.it/150x100" width="150" height="100" alt="Техномарт">
+        </a>
+        <form action="" method="get">
+          <input type="search" placeholder="Поиск:">
+          <button type="submit"></button>
+        <!-- тут нет ссылки для action -->
+        </form>
+        <section class="users-menu">
+          <ul>
+            <li class="users-menu-item"><a href="#">Закладки: <span>0</span></a></li>
+            <li class="users-menu-item"><a href="#">Корзина: <span>10</span></a></li>
+          </ul>
+          <a href="#" class="users-menu-item submit-order">Оформить заказ</a>
+        </section>
+      </div>      
+      <div class="main-header-content">
+        <p class="subtitle">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+        <address>
+          <a href="tel:"+78125550555">+7 (812) 555-05-55</a>
+          <p>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </address>
+        <!-- Насколько я прочитала в описании <address>, в нем имеет смысл держать всю контактную информацию, не обязательно только адрес -->
         <div class="signed-in">
             <a href="profile.html">Равшан Джамшутович</a>
             <a href="#" class="exit">Выйти</a>
-<!-- Не знаю, как выполняется выход из личного кабинета. Тоже через формы? Также кнопка выхода не содержит текста, но должна быть рабочей в отсутствие стилевых файлов для сохранения функциональности. Изображение здесь не контентное, поэтому будет задаваться через bacground-image. Можно ли написать "Выйти" и потом скрыть средствами сss? Или стоит сделать как-то по-другому? -->
         </div>
         <ul class="profile-links">
           <li><a href="profile.html/orders" class="header-link">Мои заказы</a></li>
@@ -38,27 +40,13 @@
         </ul>
       <nav class="main-navigation">
         <ul>
-          <li>
-            <a href="index.html">Главная</a>
-          </li>
-          <li>
-            <a href="company.html">Компания</a>
-          </li>
-          <li>
-            <a href="catalog.html">Каталог</a>
-          </li>
-          <li>
-            <a href="news.html">Новости</a>
-          </li>
-          <li>
-            <a href="sale.html">Спецпредложения</a>
-          </li>
-          <li>
-            <a href="delivery.html">Доставка</a>
-          </li>
-          <li>
-            <a href="contacts.html">Контакты</a>
-          </li>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="company.html">Компания</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="sale.html">Спецпредложения</a></li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -66,240 +54,211 @@
     <main>
       <nav class="breadcrumbs">
         <ol>
-          <li>
-            <a href="index.html" class="breadcrumbs-first">Техномарт</a>
-          <!-- аналогичный вопрос про первую кнопку, она также выглядит картинкой, но должна быть функциональна в отсутствии css. На всякий случай задала ей класс -->
-          </li>
-          <li>
-            <a href="catalog.html">Каталог</a>
-          </li>
-          <li>
-            <a href="catalog.html/tools">Инструменты</a>
-          </li>
-          <li>
-            <a href="catalog.html/tools/perforators">Перфораторы</a>
-          </li>
+          <li><a href="index.html">Техномарт</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="catalog.html/tools">Инструменты</a></li>
+          <li>Перфораторы</li>
         </ol>
       </nav>
-      <h2>Перфораторы</h2>
-      <section class="filtres">
-        <h3>Фильтр:</h3>
-        <section class="filtres-price">
-          <h4>Цена:</h4>
-          <!-- здесь будет форма для фильтра цены, по ТЗ оказывается формы можно не делать. -->
+      <section class="perforators-content">
+        <h1>Перфораторы</h1>
+        <section class="filtres">
+          <h3>Фильтры:</h3>
+          <!--Здесь будут фильтры по цене, производителю, питанию -->
+        </section>        
+        <div class="perforators-main-content">
+          <section class="products">
+            <h2 class="hidden">Товары:</h2>
+            <section class="sorting">
+              <h3>Сортировка:</h3>
+              <ul class="sorting-parameter">
+                <li><a href="#">По цене</a></li>
+                <li><a href="#">По типу</a></li>
+                <li><a href="#">По функционалу</a></li>
+              </ul>
+              <ul class="order">
+                <li><a href="#">По возрастанию</a></li>
+                <li><a href="#">По убыванию</a></li>
+                <!-- Тут текст должен быть скрыт, а подсказки отображаться по наведению мышки, не знаю, как реализовать -->
+              </ul>
+            </section>
+            <ul class="products-list">
+              <li>
+                <article class="products-item">
+                  <img src="http://placehold.it/150x100" width="150" height="100">
+                  <h3><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
+                  <p class="products-old-price"><s>22500</s></p>
+                  <p class="products-price">15500</p>
+                  <section class="hover-buttons">
+                    <a href="#" class="button button-products button-buy">Купить</a>
+                    <a href="#" class="button button-products button-bookmark">В закладки</a>
+                  </section>
+                </article>
+              </li>
+              <li>
+                <article class="products-item">
+                  <img src="http://placehold.it/150x100" width="150" height="100">
+                  <h3><a href="#">Перфоратор BOSCH BFG 6000</a></h3>
+                  <p class="products-old-price"><s>30500</s></p>
+                  <p class="products-price">25500</p>
+                  <section class="hover-buttons">
+                    <a href="#" class="button button-products button-buy">Купить</a>
+                    <a href="#" class="button button-products button-bookmark">В закладки</a>
+                  </section>
+                </article>
+              </li>
+              <li>
+                <article class="products-item new">
+                  <img src="http://placehold.it/150x100" width="150" height="100">
+                  <h3><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
+                  <p class="products-old-price no-price"></p>
+                  <p class="products-price">12500</p>
+                  <section class="hover-buttons">
+                    <a href="#" class="button button-products button-buy">Купить</a>
+                    <a href="#" class="button button-products button-bookmark">В закладки</a>
+                  </section>
+                </article>
+              </li>
+              <li>
+                <article class="products-item">
+                  <img src="http://placehold.it/150x100" width="150" height="100">
+                  <h3><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
+                  <p class="products-old-price"><s>22500</s></p>
+                  <p class="products-price">15500</p>
+                  <section class="hover-buttons">
+                    <a href="#" class="button button-products button-buy">Купить</a>
+                    <a href="#" class="button button-products button-bookmark">В закладки</a>
+                  </section>
+                </article>
+              </li>
+              <li>
+                <article class="products-item new">
+                  <img src="http://placehold.it/150x100" width="150" height="100">
+                  <h3><a href="#">Перфоратор BOSCH BFG 6000</a></h3>
+                  <p class="products-old-price"><s>30500</s></p>
+                  <p class="products-price">25500</p>
+                  <section class="hover-buttons">
+                    <a href="#" class="button button-products button-buy">Купить</a>
+                    <a href="#" class="button button-products button-bookmark">В закладки</a>
+                  </section>
+                </article>
+              </li>
+              <li>
+                <article class="products-item">
+                  <img src="http://placehold.it/150x100" width="150" height="100">
+                  <h3><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
+                  <p class="products-old-price no-price"></p>
+                  <p class="products-price">12500</p>
+                  <section class="hover-buttons">
+                    <a href="#" class="button button-products button-buy">Купить</a>
+                    <a href="#" class="button button-products button-bookmark">В закладки</a>
+                  </section>
+                </article>
+              </li>
+              <li>
+                <article class="products-item new">
+                  <img src="http://placehold.it/150x100" width="150" height="100">
+                  <h3><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
+                  <p class="products-old-price"><s>22500</s></p>
+                  <p class="products-price">15500</p>
+                  <section class="hover-buttons">
+                    <a href="#" class="button button-products button-buy">Купить</a>
+                    <a href="#" class="button button-products button-bookmark">В закладки</a>
+                  </section>
+                </article>
+              </li>
+              <li>
+                <article class="products-item">
+                  <img src="http://placehold.it/150x100" width="150" height="100">
+                  <h3><a href="#">Перфоратор BOSCH BFG 6000</a></h3>
+                  <p class="products-old-price"><s>30500</s></p>
+                  <p class="products-price">25500</p>
+                  <section class="hover-buttons">
+                    <a href="#" class="button button-products button-buy">Купить</a>
+                    <a href="#" class="button button-products button-bookmark">В закладки</a>
+                  </section>
+                </article>
+              </li>
+              <li>
+                <article class="products-item">
+                  <img src="http://placehold.it/150x100" width="150" height="100">
+                  <h3><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
+                  <p class="products-old-price no-price"></p>
+                  <p class="products-price">12500</p>
+                  <section class="hover-buttons">
+                    <a href="#" class="button button-products button-buy">Купить</a>
+                    <a href="#" class="button button-products button-bookmark">В закладки</a>
+                  </section>
+                </article>
+              </li>
+            </ul>
+          </section>
+          <section class="pagination">
+            <span class="page-active">1</span>
+            <span class="page"><a href="catalog.html/tools/perforators/page=2">2</a></span>
+            <span class="page"><a href="catalog.html/tools/perforators/page=3">3</a></span>
+            <span class="page-next"><a href="catalog.html/tools/perforators/page=2">Следующая</a></span>
+          </section>
+        </div>
+        <section class="annotation">
+          <h2>Пара слов о перфораторах</h2>
+          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
         </section>
-        <section class="filtres-brands">
-          <h4>Производители:</h4>
-          <!-- здесь будет форма для фильтра производителя -->
-        </section>
-        <section class="filtres-other">
-          <h4>Питание:</h4>
-          <!-- здесь будет форма для фильтра по типу питания -->
-        </section>
-        <button class="button button-filtres" type="submit">Показать</button>
-        <!-- кстати, h4 скорее всего будут не заголовками, а лейблами, оборачивающими фильтры, соответственно, секшны будут не секшнами, а собственно фильтрами.-->
-      </section>
-      <section class="products">
-        <h2 class="hidden">Товары:</h2>
-        <section class="sorting">
-          <h3>Сортировка:</h3>
-          <ul class="sorting-parameter">
-            <li>
-              <a href="#">По цене</a>
-            </li>
-            <li>
-              <a href="#">По типу</a>
-            </li>
-            <li>
-              <a href="#">По функционалу</a>
-            </li>
-          </ul>
-          <ul class="order">
-            <li>
-              <a href="#">По возрастанию</a>
-            </li>
-            <li>
-              <a href="#">По убыванию</a>
-            </li>
-            <!-- Тут текст должен быть скрыт, а подсказки отображаться по наведению мышки, не знаю, как реализовать -->
-          </ul>
-        </section>
-        <ul class="products-list">
-          <li>
-            <article class="products-item">
-              <img src="http://placehold.it/150x100" width="150" height="100">
-              <h3>Перфоратор BOSCH BFG 3000</h3>
-              <p class="products-old-price"><s>22500 Р.</s></p>
-              <a href="#" class="products-price">15500 Р.</a>
-              <a href="#" class="button button-products button-buy">Купить</a>
-              <a href="#" class="button button-products button-bookmark">В закладки</a>
-            </article>
-          </li>
-          <li>
-            <article class="products-item">
-              <img src="http://placehold.it/150x100" width="150" height="100">
-              <h3>Перфоратор BOSCH BFG 6000</h3>
-              <p class="products-old-price"><s>30500 Р.</s></p>
-              <a href="#" class="products-price">25500 Р.</a>
-              <a href="#" class="button button-products button-buy">Купить</a>
-              <a href="#" class="button button-products button-bookmark">В закладки</a>
-            </article>
-          </li>
-          <li>
-            <article class="products-item">
-              <img src="http://placehold.it/150x100" width="150" height="100">
-              <h3>Перфоратор BOSCH BFG 2000</h3>
-              <p class="products-old-price"><s>30500 Р.</s></p>
-              <a href="#" class="products-price">12500 Р.</a>
-              <a href="#" class="button button-products button-buy">Купить</a>
-              <a href="#" class="button button-products button-bookmark">В закладки</a>
-              <span class="sticker-new">new</span>
-            </article>
-          </li>
-          <li>
-            <article class="products-item">
-              <img src="http://placehold.it/150x100" width="150" height="100">
-              <h3>Перфоратор BOSCH BFG 3000</h3>
-              <p class="products-old-price no-price">22500 Р.</p>
-              <a href="#" class="products-price">15500 Р.</a>
-              <a href="#" class="button button-products button-buy">Купить</a>
-              <a href="#" class="button button-products button-bookmark">В закладки</a>
-            </article>
-          </li>
-          <li>
-            <article class="products-item">
-              <img src="http://placehold.it/150x100" width="150" height="100">
-              <h3>Перфоратор BOSCH BFG 6000</h3>
-              <p class="products-old-price no-price">30500 Р.</p>
-              <a href="#" class="products-price">25500 Р.</a>
-              <a href="#" class="button button-products button-buy">Купить</a>
-              <a href="#" class="button button-products button-bookmark">В закладки</a>
-              <span class="sticker-new">new</span>
-            </article>
-          </li>
-          <li>
-            <article class="products-item">
-              <img src="http://placehold.it/150x100" width="150" height="100">
-              <h3>Перфоратор BOSCH BFG 2000</h3>
-              <p class="products-old-price no-price"></p>
-              <a href="#" class="products-price">12500 Р.</a>
-              <a href="#" class="button button-products button-buy">Купить</a>
-              <a href="#" class="button button-products button-bookmark">В закладки</a>
-            </article>
-          </li>
-          <li>
-            <article class="products-item">
-              <img src="http://placehold.it/150x100" width="150" height="100">
-              <h3>Перфоратор BOSCH BFG 3000</h3>
-              <p class="products-old-price no-price">22500 Р.</p>
-              <a href="#" class="products-price">15500 Р.</a>
-              <a href="#" class="button button-products button-buy">Купить</a>
-              <a href="#" class="button button-products button-bookmark">В закладки</a>
-              <span class="sticker-new">new</span>
-            </article>
-          </li>
-          <li>
-            <article class="products-item">
-              <img src="http://placehold.it/150x100" width="150" height="100">
-              <h3>Перфоратор BOSCH BFG 6000</h3>
-              <p class="products-old-price no-price">30500 Р.</p>
-              <a href="#" class="products-price">25500 Р.</a>
-              <a href="#" class="button button-products button-buy">Купить</a>
-              <a href="#" class="button button-products button-bookmark">В закладки</a>
-            </article>
-          </li>
-          <li>
-            <article class="products-item">
-              <img src="http://placehold.it/150x100" width="150" height="100">
-              <h3>Перфоратор BOSCH BFG 2000</h3>
-              <p class="products-old-price no-price"></p>
-              <a href="#" class="products-price">12500 Р.</a>
-              <a href="#" class="button button-products button-buy">Купить</a>
-              <a href="#" class="button button-products button-bookmark">В закладки</a>
-            </article>
-          </li>
-          <!-- Не знаю, как адекватно скрыть отсутствующий блок со старой ценой, чтобы не поехал вверх нижний блок с актуальной ценой. Надо ли карточки товаров выделять в артиклы, или можно убрать артиклы и оставить только li? -->
-          </li>
-        <!-- Не знаю, как реализовать то, что нарисовано на макете - изменение содержания артиклов по наведению мыши. Надо ли отдельно размечать кнопки "Купить" и "В закладки"? Или они как-то реализуются через css? --> 
-        </ul>
-      </section>
-      <section class="pagination">
-        <span class="page-active">1</span>
-        <span class="page"><a href="catalog.html/tools/perforators/page=2">2</a></span>
-        <span class="page"><a href="catalog.html/tools/perforators/page=3">3</a></span>
-        <span class="page-next"><a href="catalog.html/tools/perforators/page=2">Следующая</a></span>
-      </section>
-      <section class="annotation">
-        <h2>Пара слов о перфораторах</h2>
-        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
-        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
       </section>
     </main>
-
-        <footer>
-      <a class="footer-logo">
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="Техномарт">
-      </a>
-      <section class="footer-contacts">
-        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-        +7 (812) 555-05-55</p>
-      </section>
-      <nav class="footer-navigation">
-        <ul>
-          <li>
-            <a href="company.html">Компания</a>
-          </li>
-          <li>
-            <a href="news.html">Новости</a>
-          </li>
-          <li>
-            <a href="catalog.html">Каталог</a>
-          </li>
-          <li>
-            <a href="delivery.html">Доставка</a>
-          </li>
-          <li>
-            <a href="contacts.html">Контакты</a>
-          </li>
+    <footer class="main-footer">
+      <div>
+        <a class="footer-logo">
+          <img src="http://placehold.it/150x100" width="150" height="100" alt="Техномарт">
+        </a>
+        <section class="footer-contacts">
+          <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+          <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+          </address>
+        </section>
+        <nav class="footer-navigation">
+          <ul>
+            <li><a href="company.html">Компания</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="delivery.html">Доставка</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+        <nav class="catalog-navigation">
+          <ul>
+            <li><a href="catalog.html/materials">Материалы</a></li>
+            <li><a href="catalog.html/technic">Техника</a></li>
+            <li><a href="catalog.html/tools">Инструмент</a></li>
+            <li><a href="catalog.html/sale">Спецпредложения</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <p class="copyright">© 2010-2017 Компания «Техномарт»<br>
+        Все права защищены</p>
+        <ul class="footer-social">
+          <li><a class="social-button" href="#">Вконтакте</a></li>
+          <li><a class="social-button" href="#">Фейсбук</a></li>
+          <li><a class="social-button" href="#">Инстаграм</a></li>
         </ul>
-      </nav>
-      <nav class="catalog-navigation">
-        <ul>
-          <li>
-            <a href="catalog.html/materials">Материалы</a>
-          </li>
-          <li>
-            <a href="catalog.html/technic">Техника</a>
-          </li>
-          <li>
-            <a href="catalog.html/tools">Инструмент</a>
-          </li>
-          <li>
-            <a href="catalog.html/sale">Спецпредложения</a>
-          </li>
-        </ul>
-      </nav>
-      <p class="copyright">© 2010-2017 Компания «Техномарт»<br>
-      Все права защищены</p>
-      <ul class="footer-social">
-        <li><a class="social-button" href="#">Вконтакте</a></li>
-        <li><a class="social-button" href="#">Фейсбук</a></li>
-        <li><a class="social-button" href="#">Инстаграм</a></li>
-      </ul>
-      <section class="developer">
-        <p>Обратная связь:<br>
-        mail@htmlacademy.ru</p>
-        <!-- Я видела, где-то е-мейлы тоже делаются ссылками. Так же в <a> со стандартными параметрами? -->
-        <p>Разработано —<br>
-        <a href="htmlacademy.ru">htmlacademy.ru</a></p>
-      </section>
+        <section class="developer">
+          <p>Обратная связь:<br>
+          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+          <p>Разработано —<br>
+          <a href="htmlacademy.ru" target=«_blank>htmlacademy.ru</a></p>
+        </section>
+      </div>
     </footer>
-    <section class="modal modal-basket">
-      <p>Товар добавлен в корзину!</p>
-      <a href="#" class="button button-basket-order">Оформить заказ</a>
-      <a class="button button-basket-back">Продолжить покупки</a>
-      <!-- Здесь, как я понимаю, кнопка "продолжить покупки" работает как и кнопка с крестиком, то есть она не должна быть ссылкой, реализуется js? -->
-      <span class="modal-close">x</span>
-    </section>
+    <div class="modal-wrap">
+      <section class="modal modal-basket">
+        <span class="modal-close">x</span>
+        <p>Товар добавлен в корзину!</p>
+        <a href="#" class="button button-basket-order">Оформить заказ</a>
+        <a class="button button-basket-back">Продолжить покупки</a>
+      <!-- Здесь, как я понимаю, кнопка "продолжить покупки" работает как и кнопка с крестиком, то есть она не должна быть ссылкой? -->
+      </section>
+    </div>
   </body>
 </html>
