@@ -63,10 +63,34 @@
       </nav>
       <section class="perforators-content">
         <h1>Перфораторы</h1>
-        <section class="filtres">
+        <form action="#" method="post"> 
           <h3>Фильтры:</h3>
-          <!--Здесь будут фильтры по цене, производителю, питанию -->
-        </section>        
+          <fieldset>
+            <legend>Цена:</legend>
+            <div class="form-range">
+              <input type="range" name="price" id="price-range" min="0" max="30000" step="500">
+            </div>
+            <div class=form-group>
+              <output name="form-value-min" min="0" max="30000">0</output>
+              <output name="form-value-max" min="0" max="30000">30000</output>
+            </div>
+          </fieldset>
+          <!-- Здесь двойной ползунок. Я не нашла, как реализовать его средствами css и не стала привязывать к форме вывода соответственно, т.к. у меня ползунок пока только один. -->
+          <fieldset>
+            <legend>Производители:</legend>
+            <label><input type="checkbox" name="Bosch" checked>Bosch</label>
+            <label><input type="checkbox" name="Интерскол">Интерскол</label>
+            <label><input type="checkbox" name="Makita" checked>Makita</label>
+            <label><input type="checkbox" name="Dewalt">Dewalt</label>
+            <label><input type="checkbox" name="Hitachi">Hitachi</label>
+          </fieldset>
+          <fieldset>
+            <legend>Питание:</legend>
+            <label><input type="radio" name="power" value="p" checked>Аккумуляторные</label>
+            <label><input type="radio" name="power" value="p">Сетевые</label>
+          </fieldset>
+          <button class="button button-filter" type="submit">Показать</button>
+        </form>        
         <div class="perforators-main-content">
           <section class="products">
             <h2 class="hidden">Товары:</h2>
@@ -78,9 +102,9 @@
                 <li><a href="#">По функционалу</a></li>
               </ul>
               <ul class="order">
-                <li><a href="#">По возрастанию</a></li>
-                <li><a href="#">По убыванию</a></li>
-                <!-- Тут текст должен быть скрыт, а подсказки отображаться по наведению мышки, не знаю, как реализовать -->
+                <li><a href="#" title="По возрастанию"><span type="visually-hidden">По возрастанию</span></a></li>
+                <li><a href="#" title="По убыванию"><span type="visually-hidden">По убыванию</span></a></li>
+                <!-- Тут текст будет скрыт, а подсказки - выводиться по наведению -->
               </ul>
             </section>
             <ul class="products-list">
