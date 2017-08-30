@@ -1,36 +1,385 @@
 body {
-	font-style: normal;
+	margin: 0;
+	padding: 0;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 13px;
 	line-height: 24px;
-	font-family: "PT Sans", "Arial", serif;
 	color: #000000;
 }
 
-h1 {
-	font-style: normal;
-	font-size: 30px;
-	line-height: 30px;
-  font-family: "Cuprum", "Arial", serif;
-  color: #32425c;
-  text-transform: uppercase;
+a {
+	text-decoration: none;
 }
 
-h2 {
+.visually-hidden {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+
+.button {
+	border: none;
+	outline: none;
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+	background-color: #ee3643;
+}
+
+.button a {
+	color: white;
+	text-transform: uppercase;
+}
+
+.button:hover,
+.button:focus {
+	background-color: #ca2c37;
+	outline: none;
+}
+
+.button:active {
+	background-color: #ba2732;
+}
+
+.main-header {
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-style: normal;
-	font-size: 30px;
+	background-color: #f3f7f9;
+}
+
+.main-header ul {
+	list-style: none;
+}
+
+.main-header-top {
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-size: 17px;
+  line-height: 18px;
+	color: white;
+	background-color: #293449;
+}
+
+.main-header-top input {
+  font: inherit;
+  color: white;
+  background-color: #293449;
+  border: none;
+}
+
+.main-header-top input:focus {
+	outline: none;
+	color: #000000;
+	background-color: white;
+	appearance: none;
+}
+
+/* потом нужно будет адекватно сделать с ховером */
+
+.main-header-top a {
+	color: white;
+}
+
+.user-menu a:hover,
+.user-menu a:focus {
+	background-color: #212a3a;
+	outline: none;
+}
+
+.user-menu a:active {
+	background-color: #161d29;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.user-menu .filled {
+	background-color: #ee3643;
+}
+
+.user-menu .filled:hover,
+.user-menu .filled:focus {
+	background-color: #ca2c37;
+}
+
+.user-menu .filled:active {
+	background-color: #ba2732;
+}
+
+.user-menu .order {
+	background-color: #63a63e;
+}
+
+.user-menu .order:hover,
+.user-menu .order:focus {
+	background-color: #5fbb2d;
+	outline: none;
+}
+
+.user-menu .order:active {
+	background-color: #63a63e;
+}
+
+/* Форму поиска не стилизовала до конца */
+
+/*Здесь начинается белая часть хедера*/
+
+.main-header p {
+	font-size: 16px;
+	font-style: italic;
+	line-height: 23px;
+	color: #ee3643;
+}
+
+.header-address a {
+	font-size: 21px;
+	line-height: 18px;
+	font-style: normal;
+	color: #e9292a;
+}
+
+.header-address p {
+	font-size: 14px;
 	line-height: 24px;
-  font-family: "Cuprum", "Arial", serif;
-  color: #000000;
+	font-style: normal;
+	color: #32425c;
+}
+
+.user-login li {
+	background-color: #ffffff;
+}
+
+.user-login a {
+	font-size: 21px;
+	color: black;
+}
+
+.user-login a:hover,
+.user-login a:focus {
+	color: #ee3643;
+	outline: none;
+}
+
+.user-login a:active {
+	color: black;
+	opacity: 0.3;
+}
+
+.user-navigation .autorization {
+	background-color: white;
+}
+
+.autorization a {
+	font-size: 21px;
+	line-height: 18px;
+	color: black;
+}
+
+.autorization a:hover,
+.autorization a:focus {
+	outline: none;
+	/*здесь будет изменение рисунков*/
+}
+
+.autorization a:active {
+	opacity: 0.3;
+}
+
+.profile-links a {
+	font-size: 16px;
+	line-height: 18px;
+	color: #32425c;
+	text-decoration: underline;
+
+}
+
+.profile-links a:hover,
+.profile-links a:focus {
+	outline: none;
+	color: #ee3643;
+}
+
+.profile-links a:active {
+	color: #32425c;
+	opacity: 0.3;
+}
+
+/* не уверена насчет opacity. Возможно, лучше сделать через rgba? */
+
+.main-navigation {
+	background-color: #32425c;
+}
+
+.main-navigation a {
+	font-size: 17px;
+	line-height: 17px;
+	color: white;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+	background-color: #293449;
+}
+
+.main-navigation a:active {
+	background-color: #1d2739;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+/* Здесь начинается промоблок */
+
+.promo {
+	color: white;
+	font-family: "Cuprum", "Arial", sans-serif;
+}
+
+.promo-list-catalog li:first-child {
+	background-color: #ffbf47;
+}
+
+.promo-list-catalog li:nth-child(2) {
+	background-color: #3bbce3;
+}
+
+.promo-list-catalog li:last-child {
+	background-color: #dc91d8;
+}
+
+.promo-list-features li:first-child {
+	background-color: #8ed78f;
+}
+
+.promo-list-features li:last-child {
+	background-color: #ffc047;
+}
+
+.promo-item a {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.promo a {
+	color: white;
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.promo-item a:hover,
+.promo-item a:focus {
+	background-color: rgba(0, 0, 0, 0.2)
+}
+
+.promo-item a:active {
+	background-color: rgba(0, 0, 0, 0.3)
+}
+
+/* это слайдер */
+/* цвет фона это временное решение */
+.promo-slider {
+	background-color: lightgray;
+}
+
+.promo-slider-item h3 {
+	font-size: 36px;
+	line-height: 30px;
+	text-transform: uppercase;
+	font-weight: 700px;
+}
+
+.promo-slider-item p {
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+/*Популярные товары*/
+.title {
+	background-color: #f9f5f0;
+}
+
+.title h2 {
+	line-height: 30px;
+  color: #3d546e;
   text-transform: uppercase;
 }
 
-h3 a {
-	font-style: bold;
+.products-item a {
 	font-size: 18px;
 	line-height: 20px;
-  font-family: "PT Sans", "Arial", serif;
-  color: #000000;
-  text-decoration: none;
+	font-weight: 700;
+	color: black;
+}
+
+.products-item {
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 17px;
+	line-height: 18px;
+	font-weight: 700;
+}
+
+.products-price {
+	color: white;
+	background-color: #ee3643;
+}
+
+.products-old-price {
+	color: #a9a9a9;
+	text-decoration: line-through;
+}
+
+.hover-buttons {
+	display: none;
+}
+
+.products-item:hover .hover-buttons {
+	display: block;
+}
+
+.button-buy {
+	background-color: #63a63e;
+}
+
+.button-buy:hover,
+.button-buy:focus {
+	background-color: #5fbb2d;
+}
+
+.button-buy:active {
+	background-color: #518534;
+}
+
+.button-bookmark {
+	color: #32425c;
+	background-color: white;
+	/* (здесь будут бордеры) */
+}
+
+.button-bookmark:hover,
+.button-bookmark:focus {
+	background-color: white;
+	/* (и здесь будут бордеры) */
+}
+
+.button-bookmark:active {
+	color: rgba(20%, 26%, 36%, 0.3);
+}
+
+/* здесь начинаются сервисы, пока что стилизую верхний слой */
+.services {
+	background-color: #f4f8f9;
+}
+
+.services h2 {
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-size: 30px;
+	line-height: 24px;
+	color: #000000;
+	text-transform: uppercase;
 }
 
 .services-item h2 {
@@ -39,8 +388,253 @@ h3 a {
 	color: #3d546e;
 }
 
-.title h2 {
-	line-height: 30px;
-  color: #3d546e;
+.services {
+	list-style: none;
 }
 
+.services li {
+	list-style: none;
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-weight: 700;
+	font-size: 21px;
+	line-height: 30px;
+	color: white;
+	background-color: #3d546e;
+}
+
+.services li:first-child {
+	color: #3d546e;
+	background-color: white;
+}
+/* вообще-то это будет active, нужно сделать слайдер - и не забыть сделать ховер
+и фокус для этих переключателей */
+
+/* это пошел блок "about" */
+
+.about-contacts h2 {
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-size: 30px;
+	line-height: 24px;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.about ul {
+	list-style: none;
+	font-size: 18px;
+	line-height: 20px;
+}
+
+/* это пошел блок "footer" */
+
+.main-footer {
+	font-family: "Cuprum", "Arial", sans-serif;
+	color: white;
+	background-color: #293449;
+}
+
+.main-footer ul {
+	list-style: none;
+}
+
+.main-footer-top {
+	background-color: #32425c;
+	font-size: 18px;
+}
+
+.main-footer-top a {
+	color: white;
+}
+
+.catalog-navigation a {
+	color: #ffd180;
+}
+
+.main-footer-navigation a:hover,
+.catalog-navigation a:hover,
+.main-footer-navigation a:focus,
+.catalog-navigation a:focus {
+	text-decoration: underline;
+}
+
+.main-footer-navigation a:active,
+.catalog-navigation a:active {
+	opacity: 0.5;
+	text-decoration: none;
+}
+
+.main-footer-address {
+	font-style: normal;
+}
+
+.main-footer-bottom {
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.main-footer-bottom a {
+	color: #ffd180;
+}
+
+.main-footer-bottom a:hover,
+.main-footer-bottom a:focus {
+	text-decoration: underline;
+}
+
+.main-footer-bottom a:active {
+	text-decoration: none;
+	color: #ee3643;
+}
+
+/* Здесь начинаются модальные окна */
+
+.modal-write-us label {
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.modal-basket p {
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-size: 30px;
+	line-height: 18px;
+}
+
+.button-basket-back {
+	background-color: white;
+	color: black;
+}
+
+.button-basket-back:hover,
+.button-basket-back:focus {
+	background-color: white;
+	outline: none;
+	color: #ee3643;
+}
+
+.button-basket-back:active {
+	background-color: white;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+/*каталог*/
+.breadcrumbs ol {
+	list-style: none;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+.breadcrumbs a {
+	color: black;
+}
+
+.perforators-content h1 {
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-size: 30px;
+	line-height: 30px;
+	color: #32425c;
+	text-transform: uppercase;
+	background-color: #f2f6f8;
+}
+
+/* фильтры */
+.perforators-content h3 {
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase;
+	background-color: #f7f3ec;
+}
+
+.filters legend {
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 17px;
+	line-height: 30px;
+	font-weight: 700;
+}
+
+.brands-filter label {
+	font-size: 15px;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+
+.power-filter label {
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+
+.button-filter {
+	font-size: 13px;
+	background-color: white;
+	color: black;
+}
+
+.button-filter:hover,
+.button-filter:focus {
+	background-color: white;
+	outline: none;
+	color: #ee3643;
+}
+
+.button-filter:active {
+	background-color: white;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+/* Сортировка */
+.sorting {
+	background-color: #f7f3ec;
+}
+
+.sorting ul {
+	list-style: none;
+	text-transform: uppercase;
+}
+
+.sorting a {
+	color: rgba(0, 0, 0, 0.3);
+	text-decoration: underline;
+	text-decoration-style: dotted;
+	text-decoration-color: #ee3643;
+}
+
+.sorting a:hover,
+.sorting a:focus {
+	color: black;
+	text-decoration-style: solid;
+}
+
+.sorting a:active {
+	color: #ee3643;
+	text-decoration: none;
+}
+
+/* временная мера, чтобы на странице "цена" выглядела как на макете */
+.sorting-parameter .active {
+	color: #ee3643;
+	text-decoration: none;
+}
+
+.pagination li {
+	list-style: none;
+}
+
+.pagination a {
+	font-size: 13px;
+	background-color: white;
+	color: black;
+	text-transform: uppercase;
+}
+
+.pagination .active {
+	color: white;
+	background-color: #ee3643;
+}
+
+.annotation h2 {
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-size: 30px;
+	line-height: 24px;
+	color: #000000;
+	text-transform: uppercase;
+}
