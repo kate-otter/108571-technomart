@@ -9,36 +9,38 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="main-header-top">  
-        <a class="main-header-logo">
-          <img src="img/logo.png" width="220" height="47" alt="Техномарт">
-        </a>
-        <form action="" method="get" class="search">
-          <label for="search">Поиск:</label>
-          <input type="search" id="search">
-        <!-- тут нет ссылки для action. Отредактировать так, чтобы лэйбл в пассивном состоянии перекрывал поле поиска. -->
-        </form>
-        <ul class="user-menu">
-          <li><a href="#">Закладки: <span>0</span></a></li>
-          <li><a href="#">Корзина: <span>0</span></a></li>
-          <li><a href="#" class="order">Оформить заказ</a></li>
-        </ul>
-      </div>      
-      <div class="main-header-content">
-        <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
+      <div class="main-header-top">
+        <div class="container">
+          <a class="main-header-logo">
+            <img src="img/logo.png" width="220" height="42" alt="Техномарт">
+          </a>
+          <form action="" method="get" class="search">
+            <label for="search">Поиск:</label>
+            <input type="search" id="search">
+            <!-- тут нет ссылки для action. Отредактировать так, чтобы лэйбл в пассивном состоянии перекрывал поле поиска. -->
+          </form>
+          <ul class="user-menu">              <li><a href="#">Закладки: <span>0</span></a></li>
+            <li><a href="#">Корзина: <span>0</span></a></li>
+            <li><a href="#" class="order">Оформить заказ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container main-header-content">
+        <p>Интернет-магазин строительных материалов<br>
+        и инструментов для ремонта</p>
         <address class="header-address">
           <a href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </address>
         <!-- Насколько я прочитала в описании <address>, в нем имеет смысл держать всю контактную информацию, не обязательно только адрес -->
         <div class="user-login">
-          <ul>
+          <ul class="user-login-links">
             <li><a href="login.html">Войти</a></li>
             <li><a href="registration.html">Регистрация</a></li>
           </ul>
         </div>
       </div>
-      <nav class="main-navigation">
+      <nav class="container main-navigation">
         <ul>
           <li><a href="index.html">Главная</a></li>
           <li><a href="company.html">Компания</a></li>
@@ -53,7 +55,7 @@
 
     <main>
       <h1 class="visually-hidden">Техномарт</h1>
-      <section class="promo">
+      <section class="container promo">
         <h2 class="visually-hidden">Промо</h2>
         <ul class="promo-list-catalog">
           <li class="promo-item">
@@ -70,35 +72,37 @@
             <a href="catalog.html/technic" class="button-promo">Для стройки</a>
           </li>
         </ul>
-        <article class="promo-slider">
-          <section class="promo-slider-item">
-            <h3>Перфораторы</h3>
-            <p>Настоящие мужские игрушки</p>
-            <a href="catalog.html/tools/perforators" class="button button-promo-slider">Открыть каталог</a>
-          </section>
-<!-- Это второй слайд, пока скрываю его
-          <section class="promo-slider-item">
-            <h3>Дрели</h3>
-            <p>Соседям на радость!</p>
-            <a href="catalog.html/tools/drills" class="button button-promo-slider">Открыть каталог</a>
-          </section>
--->
-          <button class="slide slide-left" type="button"><span class="visually-hidden">Назад</span></button>
+        <div class="promo-wrapper">
+          <article class="promo-slider">
+            <section class="promo-slider-item">
+              <h3>Перфораторы</h3>
+              <p>Настоящие мужские игрушки</p>
+              <a href="catalog.html/tools/perforators" class="button button-promo-slider">Открыть каталог</a>
+            </section>
+  <!-- Это второй слайд, пока скрываю его
+            <section class="promo-slider-item">
+              <h3>Дрели</h3>
+              <p>Соседям на радость!</p>
+              <a href="catalog.html/tools/drills" class="button button-promo-slider">Открыть каталог</a>
+            </section>
+  -->
+            <button class="slide slide-left" type="button"><span class="visually-hidden">Назад</span></button>
             <button class="slide slide-right" type="button"><span class="visually-hidden">Вперёд</span></button>
-        </article>
+          </article>
 
-        <ul class="promo-list-features">
-          <li class="promo-item">
-            <h3>Скидки 50%</h3>
-            <a href="catalog.html/sale" class="button-promo">На 350 товаров</a>
-          </li>
-          <li class="promo-item">
-            <h3>Доставка</h3>
-            <a href="delivery.html" class="button-promo">Бесплатно</a>
-          </li>
-        </ul>                    
+          <ul class="promo-list-features">
+            <li class="promo-item">
+              <h3>Скидки 50%</h3>
+              <a href="catalog.html/sale" class="button-promo">На 350 товаров</a>
+            </li>
+            <li class="promo-item">
+              <h3>Доставка</h3>
+              <a href="delivery.html" class="button-promo">Бесплатно</a>
+            </li>
+          </ul>
+        </div>
       </section>
-      <section class="products products-index">
+      <section class="container products products-index">
         <div class="title">  
           <h2>Популярные товары:</h2>
           <a href="#" class="button button-products">Все популярные товары</a>
@@ -155,7 +159,7 @@
           </li>
         </ul>
       </section>
-      <section class="brands">
+      <section class="container brands">
         <div class="title">  
           <h2>Популярные производители:</h2>
           <a href="catalog.html/brands" class="button button-products">Все производители</a>
@@ -188,36 +192,38 @@
         </ul>
       </section>
       <section class="services">
-        <h2>Сервисы</h2>
-        <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
-        Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        <ul class="slider-buttons">
-          <li><a>Доставка</a></li>
-          <li><a>Гарантия</a></li>
-          <li><a>Кредит</a></li>
-<!-- Не уверена, что это должно быть ссылками и должно быть как-то связано со следующими абзацами -->
-        </ul>
-        <div class="services-item">
-          <h2>Доставка</h2>
-          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+        <div class="container">
+          <h2>Сервисы</h2>
+          <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
+          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          <ul class="slider-buttons">
+            <li><a>Доставка</a></li>
+            <li><a>Гарантия</a></li>
+            <li><a>Кредит</a></li>
+  <!-- Не уверена, что это должно быть ссылками и должно быть как-то связано со следующими абзацами -->
+          </ul>
+          <div class="services-item">
+            <h2>Доставка</h2>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+          </div>
+  <!-- Это скрываю до тех пор, пока не научусь делать слайдеры и т.п.
+          <div class="services-item">
+            <h2>Гарантия</h2>
+            <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
+            Дом уж восстановите как-нибудь сами.</p>
+          </div>
+          <div class="services-item">
+            <h2>Кредит</h2>
+            <p>Залезть в долговую яму стало проще!<br>
+            Кредитные консультанты придут вам на помощь.</p>
+            <a href="#" class="button button-credit">Отправить заявку</a>
+          </div>
+  -->
         </div>
-<!-- Это скрываю до тех пор, пока не научусь делать слайдеры и т.п.
-        <div class="services-item">
-          <h2>Гарантия</h2>
-          <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
-          Дом уж восстановите как-нибудь сами.</p>
-        </div>
-        <div class="services-item">
-          <h2>Кредит</h2>
-          <p>Залезть в долговую яму стало проще!<br>
-          Кредитные консультанты придут вам на помощь.</p>
-          <a href="#" class="button button-credit">Отправить заявку</a>
-        </div>
--->
       </section>
-      <div class="about-contacts">
+      <div class="container about-contacts">
         <section class="about">
-          <h2>Компания «Технмарт»</h2>
+          <h2>Компания «Техномарт»</h2>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
           <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
           Техномарт работает со многими транспортными компаниями:</p>
@@ -239,44 +245,48 @@
     </main>
     <footer class="main-footer">
       <div class="main-footer-top">
-        <a class="main-footer-logo">
-          <img src="img/logo-footer.png" width="220" height="68" alt="Техномарт">
-        </a>
-        <address class="main-footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-        <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-        </address>
-        <div class="main-footer-navigation">
-          <ul>
-            <li><a href="company.html">Компания</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="delivery.html">Доставка</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-          </ul>
-        </div>
-        <div class="catalog-navigation">
-          <ul>
-            <li><a href="catalog.html/materials">Материалы</a></li>
-            <li><a href="catalog.html/technic">Техника</a></li>
-            <li><a href="catalog.html/tools">Инструмент</a></li>
-            <li><a href="catalog.html/sale">Спецпредложения</a></li>
-          </ul>
+        <div class="container">
+          <div class="main-footer-top-wrapper">
+            <a class="main-footer-logo">
+              <img src="img/logo-footer.png" width="220" height="68" alt="Техномарт">
+            </a>
+            <ul class="main-footer-navigation">
+              <li><a href="company.html">Компания</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="catalog.html">Каталог</a></li>
+              <li><a href="delivery.html">Доставка</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="main-footer-top-wrapper">
+            <address class="main-footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+            <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+            </address>
+            <ul class="catalog-navigation">
+              <li><a href="catalog.html/materials">Материалы</a></li>
+              <li><a href="catalog.html/technic">Техника</a></li>
+              <li><a href="catalog.html/tools">Инструмент</a></li>
+              <li><a href="catalog.html/sale">Спецпредложения</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="main-footer-bottom">
-        <p class="copyright">© 2010-2017 Компания «Техномарт»<br>
-        Все права защищены</p>
-        <ul class="footer-social">
-          <li><a class="social-button" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
-          <li><a class="social-button" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
-          <li><a class="social-button" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
-        </ul>
-        <section class="developer">
-          <p>Обратная связь:<br>
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-          <p>Разработано —<br>
-          <a href="htmlacademy.ru" target=«_blank>htmlacademy.ru</a></p>
-        </section>
+        <div class="container">
+          <p class="copyright">© 2010-2017 Компания «Техномарт»<br>
+          Все права защищены</p>
+          <ul class="footer-social">
+            <li><a class="social-button" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+            <li><a class="social-button" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+            <li><a class="social-button" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
+          </ul>
+          <section class="developer">
+            <p>Обратная связь:<br>
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+            <p>Разработано —<br>
+            <a href="https://htmlacademy.ru/intensive/htmlcss" target=«_blank>htmlacademy.ru</a></p>
+          </section>
+        </div>
       </div>
     </footer> 
     <div class="modal-wrap">

@@ -11,6 +11,13 @@ a {
 	text-decoration: none;
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Базовая стилизация */
+
 .visually-hidden {
 	position: absolute;
 	overflow: hidden;
@@ -303,6 +310,8 @@ a {
 }
 
 .title h2 {
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-size: 30px;
 	line-height: 30px;
   color: #3d546e;
   text-transform: uppercase;
@@ -377,14 +386,15 @@ a {
 .services h2 {
 	font-family: "Cuprum", "Arial", sans-serif;
 	font-size: 30px;
-	line-height: 24px;
+	line-height: 30px;
+	font-weight: normal;
 	color: #000000;
 	text-transform: uppercase;
 }
 
 .services-item h2 {
   font-size: 36px;
-	line-height: 24px;
+	line-height: 36px;
 	color: #3d546e;
 }
 
@@ -414,7 +424,8 @@ a {
 .about-contacts h2 {
 	font-family: "Cuprum", "Arial", sans-serif;
 	font-size: 30px;
-	line-height: 24px;
+	line-height: 30px;
+	font-weight: normal;
 	color: #000000;
 	text-transform: uppercase;
 }
@@ -488,6 +499,16 @@ a {
 
 /* Здесь начинаются модальные окна */
 
+.modal-write-us {
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.modal-write-us input {
+	font: inherit;
+}
+
 .modal-write-us label {
 	font-family: "Cuprum", "Arial", sans-serif;
 	font-size: 18px;
@@ -518,7 +539,7 @@ a {
 }
 
 /*каталог*/
-.breadcrumbs ol {
+.breadcrumbs {
 	list-style: none;
 	line-height: 18px;
 	text-transform: uppercase;
@@ -531,6 +552,7 @@ a {
 	font-family: "Cuprum", "Arial", sans-serif;
 	font-size: 30px;
 	line-height: 30px;
+	font-weight: normal;
 	color: #32425c;
 	text-transform: uppercase;
 	background-color: #f2f6f8;
@@ -634,7 +656,430 @@ a {
 .annotation h2 {
 	font-family: "Cuprum", "Arial", sans-serif;
 	font-size: 30px;
-	line-height: 24px;
+	line-height: 30px;
+	font-weight: normal;
 	color: #000000;
 	text-transform: uppercase;
 }
+
+.annotation {
+	background-color: #f2f6f8;
+}
+
+/* СЕТКА 
+СЕТКА 
+СЕТКА 
+СЕТКА 
+СЕТКА
+СЕТКА
+*/
+/* Здесь начинается Хедер */
+.main-header-top {
+	width: 100%;
+	margin-bottom: 45px;
+	background-color: #293449;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main-header-top .container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main-header-logo {
+	display: block;
+	height: 42px;
+}
+
+.user-menu {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0;
+}
+
+.main-header-content {
+	margin-bottom: 42px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.main-header-content p {
+	display: block;
+	width: 200px;
+	padding: 0;
+	margin: 0;
+}
+
+.header-address {
+	width: 270px;
+}
+
+.user-login-links {
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+.profile-links {
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+.main-navigation ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 0;
+	padding: 0 23px 0 23px;
+	align-items: center;
+	box-shadow: inset 0 -5px #293449;
+}
+
+.main-navigation li {
+	flex-grow: 1;
+	text-align: center;
+}
+
+.main-navigation a {
+	display: block;
+  width: 100%;
+  padding-top: 19px;
+  padding-bottom: 23px;
+}
+
+.main-header {
+	padding-bottom: 60px;
+}
+
+/* здесь начинается Промо */
+
+.promo {
+	padding-top: 60px;
+	padding-bottom: 53px;
+}
+
+.promo ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.promo-list-catalog {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-bottom: 20px;
+}
+
+.promo-item {
+	width: 300px;
+	height: 123px;
+}
+
+.promo-wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 940px;
+	height: 266px;
+	padding-top: 20px;
+	align-content: space-between;
+}
+
+.promo h3 {
+	margin: 0;
+	padding: 0;
+}
+
+.promo-slider {
+	width: 620px;
+	height: 266px;
+}
+
+.promo-wrapper .promo-item:first-of-type {
+	margin-bottom: 20px;
+}
+/* мне кажется, этого можно было добиться средствами флексбокса, но 
+	justify-content: space-between; их не распределял как надо; align-content
+	влиял только на положение "по ширине", то есть на выравнивание вокруг 
+	главных направляющих, не по y. */
+
+/* здесь начинается Популярные товары */
+
+.title {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 30px;
+}
+
+.title h2 {
+	margin: 0;
+}
+
+.products-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.products-item {
+	border: 1px solid #eaeaea;
+	width: 218px;
+	/* временно для сетки */
+	min-height: 316px;
+	margin-bottom: 20px;
+}
+
+/* здесь начинается Популярные производители (бренды) */
+
+.brands ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.brands {
+	padding-bottom: 65px;
+}
+
+.brands-list a {
+	display: block;
+	height: 143px;
+	border: 1px solid #eaeaea;
+	margin-bottom: 20px;
+	min-height: 140px;
+}
+/* здесь начинается Сервисы - не стала их подробно размечать, нужно 
+сначала сделать слайдеры */
+
+.services h2 {
+	margin: 0;
+	margin-bottom: 34px;
+}
+
+.services {
+	padding-top: 68px;
+	/* временно для сетки */
+	min-height: 454px;
+}
+
+.slider-buttons {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.services p {
+	margin: 0;
+}
+/* здесь начинается about-contacts */
+
+.about-contacts {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 82px;
+	padding-bottom: 86px;
+}
+
+.about-contacts h2 {
+	margin: 0;
+}
+
+.about {
+	width: 540px;
+	min-height: 368px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.contacts {
+	width: 300px;
+	min-height: 368px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+/* здесь начинается футер */
+.main-footer-top {
+	/* временно для сетки */
+	min-height: 193px;
+}
+.main-footer ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.main-footer-top-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	min-height: 96px;
+}
+
+.main-footer-top-wrapper:last-child {
+	min-height: 98px;
+}
+
+.main-footer-top address {
+	padding-left: 4px;
+}
+
+.main-footer-navigation {
+	width: 550px;
+	align-items: center;
+}
+
+.catalog-navigation {
+	width: 525px;
+}
+
+
+.main-footer-bottom p {
+	margin: 0;
+}
+
+.main-footer-bottom .container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	min-height: 106px;
+	align-items: center;
+}
+
+.developer {
+	width: 300px;
+	display: flex;
+	justify-content: space-between;
+	padding-left: 10px;
+	padding-right: 14px;
+	align-items: center;
+}
+
+/* Здесь начинается Каталог*/
+/* Здесь начинается Хлебные крошки */
+.breadcrumbs {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	min-height: 60px;
+}
+
+.perforators-content h1 {
+	margin: 0;
+	padding: 28px;
+}
+
+/* здесь начинается основной контент */
+.main-content-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-top: 20px;
+}
+
+/* здесь начинаются фильтры, подробно не прорабатываю, пока не сделала их */
+.perforators-content form {
+	/* временно для сетки */
+	width: 220px;
+	min-height: 746px;
+}
+
+.perforators-main-content {
+	width: 700px;
+}
+
+.perforators-content h3 {
+	padding: 12px 0 12px 18px;
+	margin: 0;
+}
+
+.sorting {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0;
+	margin-bottom: 20px;
+}
+
+.sorting ul {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	/* не стала дорабатывать, сделаю, когда перейду к мелкосетке */
+}
+
+.pagination {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	margin-top: 32px;
+	margin-bottom: 60px;
+}
+
+.pagination li {
+	width: 36px;
+	height: 36px;
+	border: 1px solid #e5e5e5;
+	margin-right: 10px;
+}
+
+.pagination a {
+	display: block;
+	width: 100%;
+	padding: 6px 0;
+	text-align: center;
+}
+
+.pagination li:first-child {
+	border: 1px solid #ee3643;
+}
+
+.pagination li:last-child {
+	width: 138px;
+}
+
+/* здесь начинается аннотация */
+.annotation {
+	padding: 63px 0;
+}
+
+.annotation h2 {
+	margin: 0;
+	margin-bottom: 30px;
+}
+
+.annotation p {
+	margin: 0;
+}
+
+
+/* на этапе главной сетки скрыла модальные окна */
+.modal {
+	display: none;
+}
+
