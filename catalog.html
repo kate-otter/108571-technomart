@@ -51,7 +51,7 @@
         <ul>
           <li><a href="index.html">Главная</a></li>
           <li><a href="company.html">Компания</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="catalog.html" class="active">Каталог</a></li>
           <li><a href="news.html">Новости</a></li>
           <li><a href="sale.html">Спецпредложения</a></li>
           <li><a href="delivery.html">Доставка</a></li>
@@ -72,31 +72,66 @@
           <h1>Перфораторы</h1>
         </div>
         <div class="container main-content-wrapper">
-          <form action="#" method="post" class="filters"> 
+          <form action="#" method="get" class="filters"> 
             <h3>Фильтр:</h3>
             <fieldset class="price-filter">
               <legend>Цена:</legend>
-              <div class="form-range">
-                <input type="range" name="price" id="price-range" min="0" max="30000" step="500">
-              </div>
-              <div class=form-group>
-                <output name="form-value-min" min="0" max="30000">0</output>
-                <output name="form-value-max" min="0" max="30000">30000</output>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar style="width=78%"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price"><input name="min-price" type="text" value="0"></label>
+                  <span>—</span>
+                  <label class="max-price"><input name="max-price" type="text" value="30000"></label>
+                </div>
               </div>
             </fieldset>
               <!-- Здесь двойной ползунок. Я не нашла, как реализовать его средствами css и не стала привязывать к форме вывода соответственно, т.к. у меня ползунок пока только один. -->
             <fieldset class="brands-filter">
               <legend>Производители:</legend>
-              <label><input type="checkbox" name="Bosch" checked>Bosch</label>
-              <label><input type="checkbox" name="Интерскол">Интерскол</label>
-              <label><input type="checkbox" name="Makita" checked>Makita</label>
-              <label><input type="checkbox" name="Dewalt">Dewalt</label>
-              <label><input type="checkbox" name="Hitachi">Hitachi</label>
+              <label class="brands-filter-item">
+                <input type="checkbox" name="Bosch" class="visually-hidden"checked>
+                <span class="checkbox-indicator"></span>
+                Bosch
+              </label>
+              <label class="brands-filter-item">
+                <input type="checkbox" name="Интерскол" class="visually-hidden">
+                <span class="checkbox-indicator"></span>
+                Интерскол
+              </label>
+              <label class="brands-filter-item">
+                <input type="checkbox" name="Makita" class="visually-hidden" checked>
+                <span class="checkbox-indicator"></span>
+                Makita
+              </label>
+              <label class="brands-filter-item">
+                <input type="checkbox" name="Dewalt" class="visually-hidden">
+                <span class="checkbox-indicator"></span>
+                Dewalt
+              </label>
+              <label class="brands-filter-item">
+                <input type="checkbox" name="Hitachi" class="visually-hidden"> 
+                <span class="checkbox-indicator"></span>
+                Hitachi
+              </label>
             </fieldset>
             <fieldset class="power-filter">
               <legend>Питание:</legend>
-              <label><input type="radio" name="power" value="p" checked>Аккумуляторные</label>
-              <label><input type="radio" name="power" value="p">Сетевые</label>
+              <label class="power-filter-item">
+                <input type="radio" name="power" value="p" class="visually-hidden" checked>
+                <span class="radio-indicator"></span>
+                Аккумуляторные
+              </label>
+              <label class="power-filter-item">
+                <input type="radio" name="power" value="p" class="visually-hidden">
+                <span class="radio-indicator"></span>
+                Сетевые
+              </label>
             </fieldset>
             <button class="button button-filter" type="submit">Показать</button>
           </form>        
