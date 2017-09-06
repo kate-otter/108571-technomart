@@ -11,27 +11,27 @@
     <header class="main-header">
       <div class="main-header-top">
         <div class="container">  
-          <a class="main-header-logo">
-            <img src="img/logo.png" width="220" height="42" alt="Техномарт">
+          <a href="index.html" class="main-header-logo">
+            <img src="img/logo.png" width="110" height="18" alt="Техномарт">
           </a>
           <form action="" method="get" class="search">
             <label for="search">Поиск:</label>
             <input type="search" id="search">
           <!-- тут нет ссылки для action. Отредактировать так, чтобы лэйбл в пассивном состоянии перекрывал поле поиска. -->
           </form>
-          <ul class="user-menu">
-            <li><a href="#">Закладки: <span>0</span></a></li>
-            <li><a href="#" class="filled">Корзина: <span>10</span></a></li>
-            <li><a href="#" class="order">Оформить заказ</a></li>
-          </ul>
+          <div class="user-menu">
+            <a href="#">Закладки: <span>0</span></a>
+            <a href="#" class="filled">Корзина: <span>10</span></a>
+            <a href="#" class="order">Оформить заказ</a>
+          </div>
         </div>
       </div>
-      <div class="container main-header-content">
+      <div class="container main-header-content clearfix">
         <p>Интернет-магазин строительных материалов<br>
         и инструментов для ремонта</p>
         <address class="header-address">
           <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-          <p>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </address>
         <!-- Насколько я прочитала в описании <address>, в нем имеет смысл держать всю контактную информацию, не обязательно только адрес -->
         <div class="user-navigation">
@@ -39,10 +39,10 @@
             <a href="profile.html">Равшан Джамшутович</a></li>
             <a href="#"><span class="visually-hidden">Выйти</span></a>
           </div>
-          <ul class="profile-links">
-            <li><a href="profile.html/orders">Мои заказы</a></li>
-            <li><a href="profile.html">Личный кабинет</a></li>
-          </ul>
+          <div class="profile-links">
+            <a href="profile.html/orders">Мои заказы</a>
+            <a href="profile.html">Личный кабинет</a>
+          </div>
         <!-- Возможно, "Мои заказы" и "Личный кабинет" стоит объединить по-другому?
         Ссылки профиля явно центруются под именем, не под кнопкой выхода. -->
         </div>
@@ -64,7 +64,7 @@
       <ol class="container breadcrumbs">
         <li><a href="index.html" class="visually-hidden">Техномарт</a></li>
         <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="catalog.html/tools">Инструменты</a></li>
+        <li><a href="catalog.html/tools">Инструмент</a></li>
         <li><a>Перфораторы</a></li>
       </ol>
       <section class="perforators-content">
@@ -111,18 +111,23 @@
                   <li><a href="#">По функционалу</a></li>
                 </ul>
                 <ul class="order">
-                  <li><a href="#" title="По возрастанию"><span class="visually-hidden">По возрастанию</span></a></li>
-                  <li><a href="#" title="По убыванию"><span class="visually-hidden">По убыванию</span></a></li>
-                  <!-- Тут текст будет скрыт, а подсказки - выводиться по наведению -->
+                  <li>
+                    <a href="#" class="up active"><span class="visually-hidden">По возрастанию</span></a>
+                  </li>
+                  <li>
+                    <a href="#" class="down"><span class="visually-hidden">По убыванию</span></a>
+                  </li>
                 </ul>
               </section>
               <ul class="products-list">
                 <li>
                   <article class="products-item">
-                    <img src="img/perforator-bosh-bfg-3000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 3000">
+                    <div class="image"> 
+                      <img src="img/perforator-bosh-bfg-3000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 3000">
+                    </div>
                     <h3><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
-                    <p class="products-old-price"><s>22500</s></p>
-                    <p class="products-price">15500</p>
+                    <p class="products-old-price">22500 Р.</p>
+                    <p class="products-price">15500 Р.</p>
                     <section class="hover-buttons">
                       <button class="button button-products button-buy" type="button">Купить</button>
                       <button class="button button-products button-bookmark" type="button">В закладки</button>
@@ -131,10 +136,12 @@
                 </li>
                 <li>
                   <article class="products-item">
-                    <img src="img/perforator-bosh-bfg-6000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 6000">
+                    <div class="image"> 
+                      <img src="img/perforator-bosh-bfg-6000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 6000">
+                    </div>
                     <h3><a href="#">Перфоратор BOSCH BFG 6000</a></h3>
-                    <p class="products-old-price"><s>30500</s></p>
-                    <p class="products-price">25500</p>
+                    <p class="products-old-price">30500 Р.</p>
+                    <p class="products-price">25500 Р.</p>
                     <section class="hover-buttons">
                       <button class="button button-products button-buy" type="button">Купить</button>
                       <button class="button button-products button-bookmark" type="button">В закладки</button>
@@ -143,10 +150,15 @@
                 </li>
                 <li>
                   <article class="products-item">
-                    <img src="img/perforator-bosh-bfg-2000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 2000">
+                    <div class="flag-new">
+                      <span class="visually-hidden">Новинка!</span>
+                    </div>
+                    <div class="image"> 
+                      <img src="img/perforator-bosh-bfg-2000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 2000">
+                    </div>
                     <h3><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
                     <p class="products-old-price no-price"></p>
-                    <p class="products-price">12500</p>
+                    <p class="products-price">12500 Р.</p>
                     <section class="hover-buttons">
                       <button class="button button-products button-buy" type="button">Купить</button>
                       <button class="button button-products button-bookmark" type="button">В закладки</button>
@@ -155,10 +167,12 @@
                 </li>
                 <li>
                   <article class="products-item">
-                    <img src="img/perforator-bosh-bfg-3000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 3000">
+                    <div class="image"> 
+                      <img src="img/perforator-bosh-bfg-3000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 3000">
+                    </div>
                     <h3><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
-                    <p class="products-old-price"><s>22500</s></p>
-                    <p class="products-price">15500</p>
+                    <p class="products-old-price">22500 Р.</p>
+                    <p class="products-price">15500 Р.</p>
                     <section class="hover-buttons">
                       <button class="button button-products button-buy" type="button">Купить</button>
                       <button class="button button-products button-bookmark" type="button">В закладки</button>
@@ -167,10 +181,15 @@
                 </li>
                 <li>
                   <article class="products-item">
-                    <img src="img/perforator-bosh-bfg-6000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 6000">
+                    <div class="flag-new">
+                      <span class="visually-hidden">Новинка!</span>
+                    </div>
+                    <div class="image"> 
+                      <img src="img/perforator-bosh-bfg-6000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 6000">
+                    </div>
                     <h3><a href="#">Перфоратор BOSCH BFG 6000</a></h3>
-                    <p class="products-old-price"><s>30500</s></p>
-                    <p class="products-price">25500</p>
+                    <p class="products-old-price">30500 Р.</p>
+                    <p class="products-price">25500 Р.</p>
                     <section class="hover-buttons">
                       <button class="button button-products button-buy" type="button">Купить</button>
                       <button class="button button-products button-bookmark" type="button">В закладки</button>
@@ -179,10 +198,12 @@
                 </li>
                 <li>
                   <article class="products-item">
-                    <img src="img/perforator-bosh-bfg-2000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 2000">
+                    <div class="image"> 
+                      <img src="img/perforator-bosh-bfg-2000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 2000">
+                    </div>
                     <h3><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
                     <p class="products-old-price no-price"></p>
-                    <p class="products-price">12500</p>
+                    <p class="products-price">12500 Р.</p>
                     <section class="hover-buttons">
                       <button class="button button-products button-buy" type="button">Купить</button>
                       <button class="button button-products button-bookmark" type="button">В закладки</button>
@@ -191,10 +212,15 @@
                 </li>
                 <li>
                   <article class="products-item">
-                    <img src="img/perforator-bosh-bfg-3000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 3000">
+                    <div class="flag-new">
+                      <span class="visually-hidden">Новинка!</span>
+                    </div>
+                    <div class="image"> 
+                      <img src="img/perforator-bosh-bfg-3000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 3000">
+                    </div>
                     <h3><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
-                    <p class="products-old-price"><s>22500</s></p>
-                    <p class="products-price">15500</p>
+                    <p class="products-old-price">22500 Р.</p>
+                    <p class="products-price">15500 Р.</p>
                     <section class="hover-buttons">
                       <button class="button button-products button-buy" type="button">Купить</button>
                       <button class="button button-products button-bookmark" type="button">В закладки</button>
@@ -203,10 +229,12 @@
                 </li>
                 <li>
                   <article class="products-item">
-                    <img src="img/perforator-bosh-bfg-6000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 6000">
+                    <div class="image"> 
+                      <img src="img/perforator-bosh-bfg-6000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 6000">
+                    </div>
                     <h3><a href="#">Перфоратор BOSCH BFG 6000</a></h3>
-                    <p class="products-old-price"><s>30500</s></p>
-                    <p class="products-price">25500</p>
+                    <p class="products-old-price">30500 Р.</p>
+                    <p class="products-price">25500 Р.</p>
                     <section class="hover-buttons">
                       <button class="button button-products button-buy" type="button">Купить</button>
                       <button class="button button-products button-bookmark" type="button">В закладки</button>
@@ -215,10 +243,12 @@
                 </li>
                 <li>
                   <article class="products-item">
-                    <img src="img/perforator-bosh-bfg-2000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 2000">
+                    <div class="image"> 
+                      <img src="img/perforator-bosh-bfg-2000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 2000">
+                    </div>
                     <h3><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
                     <p class="products-old-price no-price"></p>
-                    <p class="products-price">12500</p>
+                    <p class="products-price">12500 Р.</p>
                     <section class="hover-buttons">
                       <button class="button button-products button-buy" type="button">Купить</button>
                       <button class="button button-products button-bookmark" type="button">В закладки</button>
@@ -248,8 +278,8 @@
       <div class="main-footer-top">
         <div class="container">
           <div class="main-footer-top-wrapper">
-            <a class="main-footer-logo">
-              <img src="img/logo-footer.png" width="220" height="68" alt="Техномарт">
+            <a href="index.html" class="main-footer-logo">
+              <img src="img/logo-footer.png" width="138" height="21" alt="Техномарт">
             </a>
             <ul class="main-footer-navigation">
               <li><a href="company.html">Компания</a></li>
@@ -273,19 +303,19 @@
         </div>
       </div>
       <div class="main-footer-bottom">
-        <div class="container"
+        <div class="container">
           <p class="copyright">© 2010-2017 Компания «Техномарт»<br>
           Все права защищены</p>
           <ul class="footer-social">
-            <li><a class="social-button" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
-            <li><a class="social-button" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
-            <li><a class="social-button" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
+            <li><a class="social-button vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+            <li><a class="social-button fb" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+            <li><a class="social-button ig" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
           </ul>
           <section class="developer">
             <p>Обратная связь:<br>
             <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
             <p>Разработано —<br>
-            <a href="htmlacademy.ru" target=«_blank>htmlacademy.ru</a></p>
+            <a href="https://htmlacademy.ru/intensive/htmlcss" target=«_blank>htmlacademy.ru</a></p>
           </section>
         </div>
       </div>
