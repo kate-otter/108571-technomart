@@ -15,9 +15,8 @@
             <img src="img/logo.png" width="110" height="18" alt="Техномарт">
           </a>
           <form action="" method="get" class="search">
-            <label for="search">Поиск:</label>
-            <input type="search" id="search">
-          <!-- тут нет ссылки для action. Отредактировать так, чтобы лэйбл в пассивном состоянии перекрывал поле поиска. -->
+            <label for="search" class="visually-hidden">Поиск</label>
+            <input type="search" id="search" placeholder="Поиск:">
           </form>
           <div class="user-menu">
             <a href="#">Закладки: <span>0</span></a>
@@ -36,7 +35,7 @@
         <!-- Насколько я прочитала в описании <address>, в нем имеет смысл держать всю контактную информацию, не обязательно только адрес -->
         <div class="user-navigation">
           <div class="autorization">
-            <a href="profile.html">Равшан Джамшутович</a></li>
+            <a href="profile.html">Равшан Джамшутович</a>
             <a href="#"><span class="visually-hidden">Выйти</span></a>
           </div>
           <div class="profile-links">
@@ -79,14 +78,13 @@
               <div class="range-filter">
                 <div class="range-controls">
                   <div class="scale">
-                    <div class="bar style="width=78%"></div>
+                    <div class="bar"></div>
                   </div>
                   <div class="toggle toggle-min"></div>
                   <div class="toggle toggle-max"></div>
                 </div>
                 <div class="price-controls">
                   <label class="min-price"><input name="min-price" type="text" value="0"></label>
-                  <span>—</span>
                   <label class="max-price"><input name="max-price" type="text" value="30000"></label>
                 </div>
               </div>
@@ -95,7 +93,7 @@
             <fieldset class="brands-filter">
               <legend>Производители:</legend>
               <label class="brands-filter-item">
-                <input type="checkbox" name="Bosch" class="visually-hidden"checked>
+                <input type="checkbox" name="Bosch" class="visually-hidden" checked>
                 <span class="checkbox-indicator"></span>
                 Bosch
               </label>
@@ -355,12 +353,15 @@
         </div>
       </div>
     </footer>
-    <div class="modal-wrap">
+    <div class="modal-window">
+      <div class="modal-wrap"></div>
       <div class="modal modal-basket">
         <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
-        <p>Товар добавлен в корзину!</p>
-        <a href="#" class="button button-basket-order">Оформить заказ</a>
-        <button class="button button-basket-back" type="button">Продолжить покупки</button>
+        <div class="text"><span></span>Товар добавлен в корзину!</div>
+        <div class="modal-basket-buttons">
+          <a href="#" class="button button-basket-order">Оформить заказ</a>
+          <button class="button button-basket-back" type="button">Продолжить покупки</button>
+        </div>
       </div>
     </div>
   </body>
