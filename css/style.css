@@ -2284,6 +2284,15 @@ input[type="radio"].visually-hidden {
           justify-content: space-between;
 }
 
+.price-controls input::-webkit-outer-spin-button,
+.price-controls input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.price-controls input[type='number'] {
+    -moz-appearance: none;
+}
+
 .price-controls label:first-of-type::after {
 	content: "";
 	position: absolute;
@@ -2424,6 +2433,24 @@ input[type="radio"].visually-hidden {
 
 input:checked ~ .power-label::before {
   background-image: url("../img/radio-on.svg");
+}
+
+.power-label:hover::before,
+.power-label:focus::before {
+	background-image: url("../img/radio-off-hover.svg");
+}
+
+input:checked ~ .power-label:hover::before,
+input:checked ~ .power-label:focus::before {
+  background-image: url("../img/radio-on-hover.svg");
+}
+
+input:disabled ~ .power-label::before {
+	opacity: 0.3
+}
+
+input:disabled ~ .power-label {
+	opacity: 0.4
 }
 
 .button-filter {
