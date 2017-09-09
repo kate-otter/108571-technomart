@@ -673,6 +673,7 @@ input[type="radio"].visually-hidden {
 	text-transform: uppercase;
 }
 
+/*
 .sorting a {
 	color: rgba(0, 0, 0, 0.3);
 	text-decoration: underline;
@@ -681,22 +682,26 @@ input[type="radio"].visually-hidden {
 	-webkit-text-decoration-color: #ee3643;
 	        text-decoration-color: #ee3643;
 }
+*/
+.sorting a {
+	color: rgba(0, 0, 0, 0.3);
+	border-bottom: 1px dotted #ee3643;
+}
 
 .sorting a:hover,
 .sorting a:focus {
 	color: black;
-	-webkit-text-decoration-style: solid;
-	        text-decoration-style: solid;
+	border-bottom: 1px solid #ee3643;
 }
 
 .sorting a:active {
 	color: #ee3643;
-	text-decoration: none;
+	border: none;
 }
 
 .sorting-parameter .active {
 	color: #ee3643;
-	text-decoration: none;
+	border: none;
 }
 
 .pagination li {
@@ -2113,6 +2118,7 @@ input[type="radio"].visually-hidden {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	border: none;
 }
 
 .order a::before {
