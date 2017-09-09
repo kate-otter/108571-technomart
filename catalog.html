@@ -5,6 +5,8 @@
     <title>Каталог</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -80,8 +82,8 @@
                   <div class="toggle toggle-max"></div>
                 </div>
                 <div class="price-controls">
-                  <label class="min-price"><input name="min-price" type="text" value="0"></label>
-                  <label class="max-price"><input name="max-price" type="text" value="30000"></label>
+                  <label class="min-price"><input name="min-price" type="number" value="0"></label>
+                  <label class="max-price"><input name="max-price" type="number" value="30000"></label>
                 </div>
               </div>
             </fieldset>
@@ -89,42 +91,35 @@
               <legend>Производители:</legend>
               <div class="brands-filter-item">
                 <input id="bosch-filter" type="checkbox" name="Bosch" class="brands-filter-checkbox visually-hidden" checked>
-                <span class="checkbox-indicator"></span>
-                <label for="bosch-filter">Bosch</label>
+                <label class="brands-label" for="bosch-filter">Bosch</label>
               </div>
               <div class="brands-filter-item">
-                <input id="interskol-filter" type="checkbox" name="Интерскол" class="brands-filter-checkbox visually-hidden">
-                <span class="checkbox-indicator"></span>
-                <label for="interskol-filter">Интерскол</label>
+                <input id="interskol-filter" type="checkbox" name="Interskol" class="brands-filter-checkbox visually-hidden">
+                <label class="brands-label" for="interskol-filter">Интерскол</label>
               </div>
               <div class="brands-filter-item">
                 <input id="makita-filter" type="checkbox" name="Makita" class="brands-filter-checkbox visually-hidden" checked>
-                <span class="checkbox-indicator"></span>
-                <label for="makita-filter">Makita</label>
+                <label class="brands-label" for="makita-filter">Makita</label>
               </div>
               <div class="brands-filter-item">
                 <input id="dewalt-filter" type="checkbox" name="Dewalt" class="brands-filter-checkbox visually-hidden">
-                <span class="checkbox-indicator"></span>
-                <label for="dewalt-filter">Dewalt</label>
+                <label class="brands-label" for="dewalt-filter">Dewalt</label>
               </div>
               <div class="brands-filter-item">
                 <input id="hitachi-filter" type="checkbox" name="Hitachi" class="brands-filter-checkbox visually-hidden"> 
-                <span class="checkbox-indicator"></span>
-                <label for="hitacki-filter">Hitachi</label>
+                <label class="brands-label" for="hitachi-filter">Hitachi</label>
               </div>
             </fieldset>
             <fieldset class="power-filter">
               <legend>Питание:</legend>
-              <label class="power-filter-item">
-                <input type="radio" name="power" value="p" class="visually-hidden" checked>
-                <span class="radio-indicator"></span>
-                Аккумуляторные
-              </label>
-              <label class="power-filter-item">
-                <input type="radio" name="power" value="p" class="visually-hidden">
-                <span class="radio-indicator"></span>
-                Сетевые
-              </label>
+              <div class="power-filter-item">
+                <input class="power-radio" type="radio" id="accum" name="power" value="p" class="visually-hidden" checked>
+                <label for="accum" class="power-label">Аккумуляторные</label>
+              </div>
+              <div class="power-filter-item">
+                <input class="power-radio" type="radio" id="cable" name="power" value="p" class="visually-hidden">
+                <label for="cable" class="power-label">Сетевые</label>
+              </div>
             </fieldset>
             <button class="button button-filter" type="submit">Показать</button>
           </form>        

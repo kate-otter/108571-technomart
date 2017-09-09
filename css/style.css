@@ -134,6 +134,8 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/icon-search.svg");
   background-repeat: no-repeat;
   background-position: 15px 12px;
+ 	outline: none;
+	background-color: #293449;
 }
 
 .main-header-top input:hover {
@@ -205,6 +207,10 @@ input[type="radio"].visually-hidden {
 
 .user-menu .order {
 	background-color: #63a63e;
+}
+
+.order a {
+	display: block;
 }
 
 .user-menu .order:hover,
@@ -2325,13 +2331,15 @@ input[type="radio"].visually-hidden {
 }
 
 .brands-filter-item {
-	position: relative;
   padding-left: 35px;
 	margin: 0 0 16px 0;
-	cursor: pointer;
 }
 
-.checkbox-indicator::before {
+.brands-filter-item {
+	position: relative;
+}
+
+.brands-label::before {
 	content: "";
 	position: absolute;
 	top: -2px;
@@ -2344,34 +2352,25 @@ input[type="radio"].visually-hidden {
 	background-position: 0 0;
 }
 
-.brands-filter-checkbox:checked ~ .checkbox-indicator::before {
-	content: "";
-	position: absolute;
-	top: -2px;
-	left: 0;
-
-	width: 26px;
-	height: 23px;
+.brands-filter-checkbox:checked ~ .brands-label::before {
 	background-image: url("../img/checkbox-on.svg");
-	background-repeat: no-repeat;
-	background-position: 0 0;
 }
 
-.brands-filter-checkbox:hover ~ .checkbox-indicator::before,
-.brands-filter-checkbox:focus ~ .checkbox-indicator::before {
+.brands-filter-checkbox:hover ~ .brands-label::before,
+.brands-filter-checkbox:focus ~ .brands-label::before {
 	background-image: url("../img/checkbox-off-hover.svg");
 }
 
-.brands-filter-checkbox:checked:hover ~ .checkbox-indicator::before,
-.brands-filter-checkbox:checked:focus ~ .checkbox-indicator::before {
+.brands-filter-checkbox:checked:hover ~ .brands-label::before,
+.brands-filter-checkbox:checked:focus ~ .brands-label::before {
 	background-image: url("../img/checkbox-on-hover.svg");
 }
 
-.brands-filter-checkbox:disabled ~ .checkbox-indicator::before {
+.brands-filter-checkbox:disabled ~ .brands-label::before{
 	opacity: 0.3;
 }
 
-.brands-filter-checkbox:disabled ~ label {
+.brands-filter-checkbox:disabled ~ .brands-label {
 	opacity: 0.4;
 }
 
@@ -2397,37 +2396,34 @@ input[type="radio"].visually-hidden {
 	cursor: pointer;
 }
 
-.power-filter-item input[type="radio"] + .radio-indicator {
+.power-label::before {
+	content: "";
 	position: absolute;
   top: -2px;
   left: -1px;
 
-  width: 17px;
-  height: 17px;
-  border: 4px solid #c5c5c5;
-  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.power-filter-item input[type="radio"]:checked + .radio-indicator::before {
+.power-label::before {
 	content: "";
 	position: absolute;
-	top: 4px;
-	left: 4px;
+  top: -2px;
+  left: -1px;
 
-	width: 9px;
-	height: 9px;
-	border-radius: 50%;
-	background-color: #c5c5c5;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.power-filter-item input[type="radio"]:hover + .radio-indicator,
-.power-filter-item input[type="radio"]:focus + .radio-indicator {
-  border: 4px solid #b5b5b5;
-}
-
-.power-filter-item input[type="radio"]:checked:hover + .radio-indicator::before,
-.power-filter-item input[type="radio"]:checked:focus + .radio-indicator::before {
-	background-color: #b5b5b5;
+input:checked ~ .power-label::before {
+  background-image: url("../img/radio-on.svg");
 }
 
 .button-filter {
