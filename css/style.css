@@ -130,6 +130,9 @@ input[type="radio"].visually-hidden {
   height: 42px;
   padding-left: 49px;
   background-color: #293449;
+ 	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
   border: none;
   background-image: url("../img/icon-search.svg");
   background-repeat: no-repeat;
@@ -159,16 +162,16 @@ input[type="radio"].visually-hidden {
   outline: none;
 }
 
-#search::-webkit-input-placeholder {
+.main-header-top input::-webkit-input-placeholder {
 	color: white;
 }
 
-#search::-moz-placeholder {
+.main-header-top input::-moz-placeholder {
 	color: white;
   opacity: 1;
 }
 
-#search:-ms-input-placeholder {
+.main-header-top input:-ms-input-placeholder {
 	color: white;
 }
 
@@ -1008,6 +1011,7 @@ input[type="radio"].visually-hidden {
 	position: relative;
 	padding-top: 7px;
 	padding-bottom: 1px;
+	vertical-align: center;
 }
 
 .profile-links a:first-child {
