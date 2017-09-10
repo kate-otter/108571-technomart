@@ -1629,9 +1629,9 @@ input[type="radio"].visually-hidden {
 	display: none;
 }
 
-#services-btn-1:checked ~ .services-slides div:first-of-type,
-#services-btn-2:checked ~ .services-slides div:nth-of-type(2),
-#services-btn-3:checked ~ .services-slides div:last-of-type {
+.services-btn-1:checked ~ .services-slides div:first-of-type,
+.services-btn-2:checked ~ .services-slides div:nth-of-type(2),
+.services-btn-3:checked ~ .services-slides div:last-of-type {
 	display: block;
 }
 
