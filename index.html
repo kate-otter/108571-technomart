@@ -54,7 +54,6 @@
           </ul>
         </nav>
       </div>
-    </div>
     </header>
     <main>
       <h1 class="visually-hidden">Техномарт</h1>
@@ -326,15 +325,18 @@
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
       <form class="write-us-form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="write-us-form-wrapper">
-          <label><p>Ваше имя:</p>
-          <input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста" required>
-          </label>
-          <label><p>Ваш e-mail:</p>
-          <input type="text" name="e-mail" id="e-mail" placeholder="Для отравки ответа" required>
-          </label>
-          <label><p>Текст письма:</p>
-          <textarea id="text" rows="4" placeholder="В свободной форме" required></textarea>
-          </label>
+          <div>
+            <label for="name">Ваше имя:</label>
+            <input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста" required>
+          </div>
+          <div>
+            <label for="e-mail">Ваш e-mail:</label>
+            <input type="text" name="e-mail" id="e-mail" placeholder="Для отравки ответа" required>
+          </div>
+          <div>
+            <label for="text">Текст письма:</label>
+            <textarea id="text" rows="4" placeholder="В свободной форме" required></textarea>
+          </div>
         </div>
         <button class="button button-appointment" type="submit">Отправить</button>
       </form>
